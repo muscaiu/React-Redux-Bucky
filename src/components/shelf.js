@@ -11,11 +11,20 @@ class Shelf extends Component {
                 'yogurt'
             ]
         }
+
+        this.onClickAdd = this.onClickAdd.bind(this)
+    }
+
+    onClickAdd(item) {
+        this.props.addItem(item)
     }
 
     render() {
         const shelfItems = this.state.shelfItems.map((item, id) =>
-            <li key={id}><button>[+]</button>{item}</li>)
+            <li key={id}>
+                <button onClick={() => this.onClickAdd(item)}>[+]</button>
+                {item}
+            </li>)
 
         return (
             <div>
