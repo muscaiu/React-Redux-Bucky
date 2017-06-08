@@ -28,7 +28,7 @@ class Shelf extends Component {
 
         return (
             <div>
-                <h2>Shelf</h2>
+                <h3>Shelf</h3>
                 <ul>{shelfItems}</ul>
             </div>
         );

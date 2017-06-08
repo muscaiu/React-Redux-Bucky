@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import * as CartActions from '../actions/add_to_cart'
-import Shelf from './shelf'
+import * as CartActions from '../actions/cartActions'
+import Shelf from './shelfComponent'
 
 class Cart extends Component {
     render() {
@@ -14,7 +14,7 @@ class Cart extends Component {
         return (
             <div className='Cart'>
                 <Shelf addItem={this.props.action.addToCart} />
-                <h2>Shopping Bag</h2>
+                <h3>Shopping Bag</h3>
                 <ol>
                 {CartItems}
                 </ol>
