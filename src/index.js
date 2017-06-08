@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
 
-import App from './App';
-import store from './store'
+import App from './components/appComponent';
+import allReducers from './store'
 import './index.css';
 
-const storeInstance = store()
+const store = allReducers()
 
 ReactDOM.render(
-    <Provider store={storeInstance}>
+    <Provider store={store}>
         <App />
     </Provider>,
     document.getElementById('root'
