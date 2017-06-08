@@ -4,6 +4,7 @@ import logo from '../logo.svg';
 import '../styles/appComponent.css';
 import Cart from './cartComponent'
 import Users from './usersComponent'
+import UserDetail from './userDetailComponent'
 
 class App extends Component {
   render() {
@@ -14,9 +15,9 @@ class App extends Component {
         </div>
         <div className="App-intro">
 
-        <Users/>
-
-        <Cart />
+          <Users />
+          <UserDetail />
+          <Cart />
 
         </div>
       </div>
