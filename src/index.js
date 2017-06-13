@@ -6,7 +6,14 @@ import App from './components/appComponent';
 import allReducers from './store'
 import './index.css';
 
+
+import { saveState } from './localStorage'
+
 const store = allReducers()
+
+store.subscribe(() => {
+    saveState(store.getState())
+})
 
 ReactDOM.render(
     <Provider store={store}>
